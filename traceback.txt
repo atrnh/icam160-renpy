@@ -1,0 +1,67 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 97, in script
+    $ renpy.pause()
+  File "game/script.rpy", line 97, in <module>
+    $ renpy.pause()
+  File "renpy/common/00action_data.rpy", line 50, in get_selected
+    return getattr(self.object, self.field) == self.value
+TypeError: getattr(): attribute name must be string
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 97, in script
+    $ renpy.pause()
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 97, in <module>
+    $ renpy.pause()
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\exports.py", line 1126, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 2149, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 2397, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\screen.py", line 388, in visit_all
+    self.child.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 340, in visit_all
+    callback(self)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\core.py", line 2397, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\behavior.py", line 668, in per_interact
+    if is_selected(self.action):
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\behavior.py", line 316, in is_selected
+    return any(is_selected(i) for i in clicked)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\behavior.py", line 316, in <genexpr>
+    return any(is_selected(i) for i in clicked)
+  File "C:\Users\qa\renpy-6.18.3-sdk\renpy\display\behavior.py", line 319, in is_selected
+    return clicked.get_selected()
+  File "renpy/common/00action_data.rpy", line 50, in get_selected
+    return getattr(self.object, self.field) == self.value
+TypeError: getattr(): attribute name must be string
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.18.3.761
+Social Media Simulator Demo 0.0
